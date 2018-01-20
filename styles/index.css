@@ -135,6 +135,10 @@ a {
   margin: 10px 0;
 }
 
+#profile-tab {
+  margin-bottom: 80px;
+}
+
 #profile-tab .mdl-data-table {
   width: 100%;
 }
