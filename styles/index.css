@@ -41,6 +41,18 @@ a {
   background-position: center;
 }
 
+@media (max-width: 380px) {
+  .mdl-layout__header-row:before, .mdl-layout__header-row:after {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .mdl-layout__header-row:before, .mdl-layout__header-row:after {
+    margin: 3px;
+  }
+}
+
 .mdl-layout__tab-bar {
   height: auto;
 }
