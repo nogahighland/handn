@@ -1,14 +1,22 @@
 @font-face {
-  font-family: 'cotillio';
-  src: url(../fonts/COTILLIO.ttf);
+  font-family: 'MyFairCody';
+  src: url(../fonts/MyFairCody.otf);
 }
 
-.font-wedding {
-  font-family: 'cotillio';
+body, h3, h4, .mdl-layout-title {
+  font-family: 'MyFairCody' !important;
 }
 
 .mdl-button {
   color: white !important;
+}
+
+.mdl-layout__header, .mdl-layout__tab-bar, .mdl-layout__tab-bar-button, #access-tab #google-button {
+  background-color: #102F7D
+}
+
+a {
+  color: #102F7D
 }
 
 .mdl-layout__header-row {
@@ -17,8 +25,20 @@
 }
 
 .mdl-layout__header-row .mdl-layout-title {
-  font-size: 31px;
+  font-size: 24px;
   letter-spacing: 0px;
+}
+
+.mdl-layout__header-row:before, .mdl-layout__header-row:after {
+  background: url(../images/geranium.png);
+  width: 25px;
+  height: 40px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  content: " ";
+  background-size: contain;
+  margin: 10px;
+  background-position: center;
 }
 
 .mdl-layout__tab-bar {
@@ -97,6 +117,7 @@
 #google-map {
   width: 100%;
   height: 250px;
+  pointer-events: none;
 }
 
 @media(min-width: 800px) {
@@ -112,7 +133,6 @@
 
 #access-tab #google-button {
   margin: 10px 0;
-  background: #3169f5;
 }
 
 #profile-tab .mdl-data-table {
@@ -154,4 +174,109 @@
 #picture-tab .text-container {
   padding-left: 10%;
   padding-right: 10%;
+}
+
+#camera-button {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  height: 80px;
+  width: 80px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #102F7D;
+  -webkit-box-shadow: 0px 0px 26px -8px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 26px -8px rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+#camera-button a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#camera-button:hover {
+  background-color: #012062;
+}
+.camera-text {
+  margin: 20px 0 -4px 0;
+  font-size: 12px;
+}
+.camera-icon {
+  font-size: 32px;
+}
+#camera-button input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 100%;
+  width:  100%;
+  opacity: 0;
+}
+
+.slide-in-up,
+.slide-in-down {
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes slide-in-up {
+from {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    visibility: visible;
+}
+to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    visibility: visible;
+}
+}
+@keyframes slide-in-up {
+from {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    visibility: visible;
+}
+to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    visibility: visible;
+}
+}
+.slide-in-up {
+  -webkit-animation-name: "slide-in-up";
+          animation-name: "slide-in-up";
+}
+@-webkit-keyframes slide-in-down {
+from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    visibility: visible;
+}
+to {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    visibility: hidden;
+}
+}
+@keyframes slide-in-down {
+from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    visibility: visible;
+}
+to {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    visibility: hidden;
+}
+}
+.slide-in-down {
+  -webkit-animation-name: "slide-in-down";
+          animation-name: "slide-in-down";
 }
