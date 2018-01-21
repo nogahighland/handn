@@ -10,7 +10,8 @@ $(function () {
       center: latLng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: true,
-      zoomControl: true
+      zoomControl: true,
+      gestureHandling: 'cooperative'
     });
     var marker = new google.maps.Marker({
       position: latLng,
